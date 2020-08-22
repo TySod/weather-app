@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import './popularcity.styles.scss'
+import './searchedcity.styles.scss'
 
-export default class PopularCity extends Component {
+export default class SearchedCity extends Component {
     render() {
         // console.log(this.props.data)
         // let {name,weather:[main, description,icon]}=this.props;
         return (
             <>
+            <h2>SerachedCity</h2>
             <div className='pop-card day'>
                 <div className="header">
                     <p className="weather">cloudy</p>

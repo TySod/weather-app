@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 
+import  PopularCity  from "../popular/PopularCity.component";
+
 import './Forecast.styles.scss'
 
-import {API_KEY} from './data'
+import {API_KEY, RAPID_API_KEY} from './data'
 
 
  class Forecast extends Component {
@@ -36,7 +38,7 @@ import {API_KEY} from './data'
     //          "method": "GET",
     //          "headers": {
     //              "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-    //              "x-rapidapi-key": "7ae9308630msh4da52ac82436ddbp1b5957jsn62f7ad52d725"
+    //              "x-rapidapi-key": RAPID_API_KEY
     //             }
     //         })
     //         .then(response => response.json())
@@ -54,7 +56,9 @@ import {API_KEY} from './data'
            <div>
                {JSON.stringify(this.state.data)}
            </div>
-           <button>Get Forecast</button>
+           <PopularCity
+           name={this.setState.data.name}
+           />
         </div>
     )
 }

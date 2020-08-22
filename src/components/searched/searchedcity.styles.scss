@@ -27,7 +27,7 @@
             padding-bottom: .5rem;   
             margin: .2rem;
             
-        &:last-child(){
+        &::last-child(){
             border-right: none;
         }
     }
