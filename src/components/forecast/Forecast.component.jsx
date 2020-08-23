@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 
+import  PopularCity  from "../popular/PopularCity.component";
+
 import './Forecast.styles.scss'
 
-import {API_KEY} from './data'
+import {API_KEY, RAPID_API_KEY} from './data'
 
 
  class Forecast extends Component {
@@ -53,7 +55,9 @@ import {API_KEY} from './data'
            <div>
                {JSON.stringify(this.state.data)}
            </div>
-           <button>Get Forecast</button>
+           <PopularCity
+           name={this.setState.data.name}
+           />
         </div>
     )
 }
