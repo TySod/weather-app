@@ -17,7 +17,7 @@ import {API_KEY} from './data'
 
      componentDidMount() {
          const base_url = `http://api.openweathermap.org/data/2.5/weather?q=london,uk&APPID=${API_KEY}`
-        fetch(base_url)
+        fetch
         .then(response => response.json())
         // .then(data=> console.log(data))
         .then(result => {
@@ -36,7 +36,6 @@ import {API_KEY} from './data'
     //          "method": "GET",
     //          "headers": {
     //              "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-    //              "x-rapidapi-key": "7ae9308630msh4da52ac82436ddbp1b5957jsn62f7ad52d725"
     //             }
     //         })
     //         .then(response => response.json())
