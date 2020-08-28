@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import Forecast from './components/forecast/Forecast.component' 
+import Forecast from './components/forecast/Forecast.component' 
 import PopularCity from './components/popular/PopularCity.component' 
 import SearchedCity from './components/searched/SearchedCity.component' 
 import CustomSearch from './components/custom-search/CustomSearch.component';
@@ -13,7 +13,7 @@ function App() {
       </header>
       <main>
         <CustomSearch/>
-      {/* <Forecast/> */}
+      <Forecast/>
       <SearchedCity/>
       <PopularCity/>
       </main>

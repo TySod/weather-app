@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export class CustomSearch extends Component {
+class CustomSearch extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -8,12 +8,14 @@ export class CustomSearch extends Component {
         }
         
     }
-         handleChange=(e)=>{
-            this.setState({value: e.target.value})
+         handleChange = (e) => {
+             let {name, value} = e.target
+            this.setState({[name]: value})
             }
 
-        handleSubmit=(e)=>{
-            this.setState({city: e.target.value})
+        handleSubmit = (e) => {
+            e.preventDefault();
+            this.setState ({city: e.target.value})
         }
             
     render() {

@@ -8,23 +8,24 @@ export default class PopularCity extends Component {
         return (
             <>
             <div className='pop-card day'>
-                <div className="header">
-                    <p className="weather">cloudy</p>
-                    <h2 className="city">Lagos</h2>
-                    <p className="temp">20&deg;C</p>
+                <div className="header"> 
+                    <p className="weather">{this.props.weather}</p>
+                    <p className="icon">{this.props.desc}</p>
+                    <h2 className="city">{this.props.cityname}</h2>
+                    <p className="temp">{this.props.temp}&deg;C</p>
                 </div>
                 <div className="card-body">
                 <div className="humid-body">
                     <p className="prop">wind</p>
-                    <i className="val">75</i>
+                    <i className="val">{this.props.wind}</i>
                 </div>
                 <div className="humid-body">
                     <p className="prop">humidity</p>
-                    <i className="val">48</i>
+                    <i className="val">{this.props.humid}</i>
                 </div>
                 <div className="humid-body">
                     <p className="prop">pressure</p>
-                    <i className="val">408</i>
+                    <i className="val">{this.props.pressure}</i>
                 </div>
             
                 </div>

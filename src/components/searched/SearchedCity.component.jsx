@@ -7,10 +7,10 @@ export default class SearchedCity extends Component {
         // let {name,weather:[main, description,icon]}=this.props;
         return (
             <>
-            <h2>SerachedCity</h2>
+            <h2>SearchedCity</h2>
             <div className='pop-card day'>
                 <div className="header">
-                    <p className="weather">cloudy</p>
+                    <p className="weather">{this.props.name}</p>
                     <h2 className="city">Lagos</h2>
                     <p className="temp">20&deg;C</p>
                 </div>
