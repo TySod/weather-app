@@ -62,11 +62,9 @@ class Forecast extends Component {
 
     if (!isLoaded) return <div>Loading...</div>;
 
-    return (   
+    return (        
       
-    
-
-        cities.map((city) => (          
+      cities.map((city) => ( 
           <PopularCity key={city.id}
           cityname={city.name}
           temp={city.temp}

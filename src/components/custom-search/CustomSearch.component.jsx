@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './custom-search.styles.scss'
 
 class CustomSearch extends Component {
     constructor(props){

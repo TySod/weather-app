@@ -1,0 +1,23 @@
+form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  input{
+    border-radius: 15px;
+    padding: 1rem;
+    margin-right: 1r3m;
+    font-size: large;
+    color: #0fd0cb;
+    width: 40%;
+    
+    
+  }
+  button{
+    border-radius: 15px;
+    background: rgb(140, 192, 255);
+    color: #ffffff;
+    padding: 1rem;
+  }
+}

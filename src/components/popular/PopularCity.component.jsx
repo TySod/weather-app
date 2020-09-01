@@ -6,7 +6,7 @@ export default class PopularCity extends Component {
         // console.log(this.props.data)
         // let {name,weather:[main, description,icon]}=this.props;
         return (
-            <>
+            <div className="popular-city">
             <div className='pop-card day'>
                 <div className="header"> 
                     <p className="weather">{this.props.weather}</p>
@@ -17,21 +17,21 @@ export default class PopularCity extends Component {
                 <div className="card-body">
                 <div className="humid-body">
                     <p className="prop">wind</p>
-                    <i className="val">{this.props.wind}</i>
+                    <p className="val">{this.props.wind} m/s</p>
                 </div>
                 <div className="humid-body">
                     <p className="prop">humidity</p>
-                    <i className="val">{this.props.humid}</i>
+                    <p className="val">{this.props.humid} &percnt; </p>
                 </div>
                 <div className="humid-body">
                     <p className="prop">pressure</p>
-                    <i className="val">{this.props.pressure}</i>
+                    <p className="val">{this.props.pressure}</p>
                 </div>
             
                 </div>
             </div>
                
-            </>
+            </div>
         )
     }
 }
