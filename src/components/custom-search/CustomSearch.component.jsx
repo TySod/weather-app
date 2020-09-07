@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './custom-search.styles.scss'
+import {API_KEY} from '../forecast/data';
 
 class CustomSearch extends Component {
     constructor(props){
@@ -16,7 +17,11 @@ class CustomSearch extends Component {
 
         handleSubmit = (e) => {
             e.preventDefault();
-            this.setState ({city: e.target.value})
+            // this.setState ({city: e.target.value})
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&APPID=${API_KEY}`)
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch()
         }
             
     render() {

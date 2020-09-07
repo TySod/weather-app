@@ -22,18 +22,16 @@ class Forecast extends Component {
     //  const base_url = `http://api.openweathermap.org/data/2.5/weather?q=london,uk&APPID=${API_KEY}`
     fetch(url)
       .then((response) => response.json())
-      // .then(data=> console.log(data))
       .then((result) => {
         const {list} = result;
 
-        console.log(list);
 
         const cities = list.map((city) => {
-          //   console.log(city);
+            console.log(city);
           const {
             name,
             main: {temp, humidity, pressure},
-            weather:[{main, desciption}], wind:{speed}, id
+            weather:[{main, desciption, icon}], wind:{speed}, id
           } = city;
 
           return {
@@ -44,7 +42,8 @@ class Forecast extends Component {
             pressure,
             mainweather: main,
             desciption,
-            windSpeed:speed
+            windSpeed:speed,
+            icon
           };
         });
 
@@ -58,12 +57,11 @@ class Forecast extends Component {
   render() {
     const {cities, isLoaded} = this.state;
 
-    console.log(cities);
 
     if (!isLoaded) return <div>Loading...</div>;
 
-    return (        
-      
+    return (   
+        
       cities.map((city) => ( 
           <PopularCity key={city.id}
           cityname={city.name}
@@ -73,9 +71,11 @@ class Forecast extends Component {
           weather={city.mainweather}
           wind={city.windSpeed}
           desc={city.desciption}
+          icon={city.icon}
           />
       
         ))
+        
     )
     
     // }
