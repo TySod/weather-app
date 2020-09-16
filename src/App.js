@@ -13,7 +13,7 @@ function App() {
       <main className='main'>
       <CustomSearch/>
       <SearchedCity/>
-      <Forecast/>
+      <Forecast className="popular"/>
       </main>
       <footer>
         created by blackSuperDev
