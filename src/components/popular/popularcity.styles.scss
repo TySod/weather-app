@@ -1,46 +1,80 @@
-.popular-city{
+
+.popular-city{  
+    overflow-x: auto;
     display: inline-block;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    flex-wrap: wrap;
-    margin: .5rem;
+    flex-flow: row nowrap;
+
+    
 
   .pop-card{
+    background: #333333;
     width: 95%;
     color: #fff;
     border-radius: 20px;
     margin: 1rem;
+    min-width: 400px;
+    
+    .time-header{
+        text-align: center;
+        display: flex;
+        flex-flow:row;
+        justify-content: space-evenly;
+        border-bottom: #aaa dotted .2px;
 
-    .header{
+        p{
+            margin: .5rem auto;
+
+        &:nth-last-child(1){
+            border-right: none;
+        }
+
+            span{
+                display: block;
+                font-size: small;
+            }
+
+        }
+
+    }
+
+    .card-body{
         display: flex;
         justify-content: space-between;
         padding: .2rem .5rem;
 
         .city{
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 1rem;
+            // font-weight: 700;
             justify-self: center;
         }
+        
+        .left-body{
+            background: yellowgreen;}
+        .main-body{background: purple;}
+        .right-body{background: orange;}
+        
+        
     }
-    
-    .card-body{
+    .footer{
         display: flex;
-        justify-content: space-evenly;
-        padding: 0.2rem;
-
-        .prop{
-            border-bottom: 1.5px #fff solid;
-            border-bottom-width: 50%;
-            padding-bottom: .5rem;   
-            margin: .2rem;
-            
-        &:last-child(){
-            border-right: none;
+        flex-direction: row;
+        
+        .humid-footer{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0.2rem;
+            .prop{
+                border-bottom: 1.5px #fff solid;
+                border-bottom-width: 50%;
+                padding-bottom: .5rem;   
+                margin: .2rem;
+                
+            &:last-child(){
+                border-right: none;
+            }
         }
-    }
-
+            
+        }
 } 
 }
 

@@ -1,4 +1,4 @@
-/* @import url('./background.js'); */
+/*@import url('./background.js'); */
 .App {
   background: url('./assets/images/sunset.jpg');
   background-position: center;
@@ -6,13 +6,11 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100%;
+  width: min-content;
+  min-width: 100%;
 }
 
-main {
-  flex-flow: 1;
-  text-align: center;
-  padding: 25px;
-}
 footer{
   padding: 2px;
   min-height: 100px;
@@ -22,22 +20,26 @@ footer{
   background: #eeeeee;
   font-size: small;
   text-align: center;
+}
+
+.popular{
+  display: flex;
+  flex-flow: row nowrap;
 
 }
 
-header{
-  padding: 25px;
- }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 300px;
+.App-header {
+  background: linear-gradient(rgb(140, 192, 255),rgb(88, 182, 250), rgb(12, 104, 233));
+  padding: 25px;
+  min-height: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: auto;
 }
 
 .App-link {
@@ -51,4 +53,4 @@ header{
   to {
     transform: rotate(360deg);
   }
-} */
+}

@@ -9,7 +9,11 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+<<<<<<< HEAD
     "react-router-dom": "^5.2.0",
+=======
+    "react-icons": "^3.11.0",
+>>>>>>> b25e225f00fc2dbd12c7a1929ab709c5a3a6768d
     "react-scripts": "3.4.3"
   },
   "scripts": {

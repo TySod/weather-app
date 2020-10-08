@@ -31,11 +31,17 @@ class Forecast extends Component {
           const {
             name,
             main: {temp, humidity, pressure},
+            sys:{country, sunrise, sunset},
             weather:[{main, desciption, icon}], wind:{speed}, id
           } = city;
+           let rise_time = new Date(sunrise*1000).toLocaleTimeString();
+            let set_time = new Date(sunset*1000).toLocaleTimeString();
+            let now = new Date().toLocaleTimeString();
 
           return {
-            id,
+            id, country,
+            rise_time, 
+            set_time,
             name,
             temp,
             humidity,
@@ -43,7 +49,8 @@ class Forecast extends Component {
             mainweather: main,
             desciption,
             windSpeed:speed,
-            icon
+            icon,
+            now
           };
         });
 
@@ -72,6 +79,10 @@ class Forecast extends Component {
           wind={city.windSpeed}
           desc={city.desciption}
           icon={city.icon}
+          country={city.country}
+          sunrise={city.rise_time}
+          sunset={city.set_time}
+          now={city.now}
           />
       
         ))

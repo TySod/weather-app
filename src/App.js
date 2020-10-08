@@ -3,6 +3,7 @@ import './App.css';
 import Forecast from './components/forecast/Forecast.component' 
 import SearchedCity from './components/searched/SearchedCity.component' 
 import CustomSearch from './components/custom-search/CustomSearch.component';
+import Sidebar from "./components/sidebar/Sidebar.component"
 
 function App() {
   return (
@@ -10,10 +11,11 @@ function App() {
       <header className="App-header">
         <h1>React Weather App</h1>
       </header>
+      <Sidebar/>
       <main className='main'>
       <CustomSearch/>
       <SearchedCity/>
-      <Forecast/>
+      <Forecast className="popular"/>
       </main>
       <footer>
         created by blackSuperDev
